@@ -7,7 +7,8 @@
 }
 
 nav {
-  position: sticky;
+  z-index: 2;
+  position: fixed;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -20,6 +21,7 @@ nav {
 }
 
 .nav-logo img {
+  z-index: 2;
   display: flex;
   width: 80px;
   height: 80px;
@@ -28,6 +30,7 @@ nav {
 
 
 .nav-links a {
+  z-index: 2;
   color: white;
   text-decoration: none;
   letter-spacing: 2px;
@@ -35,6 +38,7 @@ nav {
 }
 
 .nav-links {
+  z-index: 2;
   display: flex;
   justify-content: space-around;
   width: 50%;
@@ -393,6 +397,7 @@ footer {
 }
 
 .footer-container {
+  background-color: #232526;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -491,17 +496,12 @@ footer {
 
 }
 
-.container-news-b {
-  width: 40%;
-}
-
 .container-news-a, .container-news-b {
-
-  background-color: grey;
+  /* background-color: grey; */
 }
 
 .main-container-news > div:nth-child(odd){
-  background-color: rgb(200, 200, 200);
+  /* background-color: rgb(200, 200, 200); */
 }
 
 .box-news-row-a {
@@ -512,15 +512,28 @@ footer {
 }
 
 .img-box {
+  z-index: -1;
   width: 40%;
   height: 100%;
   border: 1px solid black;
+  overflow: hidden;
 }
 
 .img-box img {
+  z-index: -1;
   object-fit: cover;
   height: 100%;
   width: 100%;
+}
+
+.box-news-row-a:hover {
+  transition: transform .5s ease;
+}
+
+.box-news-row-a:hover img {
+  z-index: 1;
+  transition: transform .5s ease;
+  transform: scale(1.1);
 }
 
 .content-box {
@@ -532,4 +545,164 @@ footer {
 
 .content-box h3, p {
   padding-bottom: 10px;
+}
+
+
+ /* CONTAINER ROW B */
+
+ .container-news-b {
+   padding-top: 10px;
+   padding-left: 10px;
+   width: 40%;
+   display: flex;
+   flex-direction: column;
+
+
+ }
+
+ .secondary-box.row-b{
+   /* leave space between secondary boxes */
+   margin-bottom: 10px;
+   width: 100%;
+   height: auto;
+   min-height: 30%;
+   /* border: 1px solid red; */
+   display: flex;
+   flex-direction: column;
+   box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+   background-color: #15151E;
+   justify-content: center;
+
+ }
+
+ .secondary-box.row-b h3 {
+    background-color: #ed213a;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7em;
+    letter-spacing: 1.2px;
+    font-style: italic;
+    font-weight: 500;
+    color: white;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+ }
+
+/* LATEST NEWS  */
+
+ .box-news.row-b {
+  /* border: 1px solid black; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+ }
+
+ .card-news {
+  background-color: #15151E;
+  color: white;
+  border: 1px solid grey;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+ }
+
+ .card-news p {
+   width: 100%;
+   padding: 0px 5px 0px 5px;
+ }
+
+
+ /* RESULTS */
+ .row-results .box-news.row-b {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   background-color: #15151E;
+   color: white;
+ }
+
+ .row-results img {
+   width: 32px;
+   height: 32px;
+   display: flex;
+   justify-content: center;
+ }
+
+ .row-results span {
+   display: flex;
+   justify-content: center;
+  width: 20%;
+ }
+
+
+ .row-results .vertical-line-red {
+   margin-left: 10px;
+   margin-right: 10px;
+ }
+
+ .card-news:hover {
+   transition: transform .2s ease;
+   color: #ed213a;
+ }
+
+ .vertical-line-red {
+   height: 100%;
+   width: 1px;
+   margin:auto;
+   background-color: #ed213a;
+ }
+
+
+ /*                RANKING PAGE                 */
+
+#section-ranking-table {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin:-75px 100px 10px 100px;
+ }
+
+/* styles the whole table */
+#ranking-table {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  border: 2px solid black;
+}
+
+/* styles rows  */
+#ranking-table tr {
+  /* border-bottom: 1px solid black;
+  border-top: 1px solid black; */
+
+}
+
+#ranking-table tr:nth-child(odd) {
+  background-color: grey;
+}
+
+/* styles each column */
+#ranking-table td {
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  height: 20px;
+  text-align: center;
+  height: 50px;
+
+}
+
+#ranking-table .img {
+  width: 32px;
+}
+
+.table-header th {
+  height: 60px;
+}
+
+.position {
+  width: 5%;
+
 }

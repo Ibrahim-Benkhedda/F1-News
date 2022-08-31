@@ -1,203 +1,273 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-    <title>Theme Park - Home</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="A theme park website for enthusiasts interested in thrillseeking and adventure.">
-    <meta name="keywords" content="Theme Park, Adventure Park">
-    <meta name="author" content="Team T4G6-QKA">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="refresh" content="600">
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
-    <!-- adds icon to the browser's tab -->
-    <link rel="icon" type="image/x-icon" href="assets/logo_icon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <link rel="icon" href="assets/images/f1.png">
+  <title>Home</title>
 </head>
-
 <body>
-    <header id="navbar">
-        <nav class="header-nav" aria-label="Main Navigation">
-            <ul class="menu">
-                <li class="logo">
-                    <a href="index.html"><img src="assets/logo.png" alt="UoL Land Logo" width="80" height="100"/></a>
-                </li>
-                <li class="logo-title">
-                    <a href="index.html" class="logo-title">UoL Land</a>
-                </li>
-                <li class="menu-item"><a href="rides.html">Rides</a></li>
-                <li class="menu-item"><a href="tickets.html">Tickets</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <!-- Script for sticky header, applys sticky style when scolled -->
-    <script>
-        window.onscroll = function(){
-            addSticky();
-        }
-
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-
-        function addSticky(){
-            if(window.pageYOffset >= sticky){
-                navbar.classList.add("sticky")
-            }
-            else{
-                navbar.classList.remove("sticky");
-            }
-        }
-    </script>
-
-    <section id="hp-promo-sale">
-        <h2>Our Early Season Sale ends June 12.</h2>
-        <h2>Get Single Day Tickets as low as $49.99!</h2>
-        <a href="tickets.html">Buy Now</a>
-    </section>
-    
-    <!--Banner image with link to rides.html-->
-    <section id="hp_banner">
-        <img class="banner_image" src="assets/hp_banner_1.jpg" alt="An image of the full park" width="1280" height="376">
-        <img class="banner_image" src="assets/hp_banner_2.jpg" alt="An image of one of the spin rides" width="1280" height="376">
-        <img class="banner_image" src="assets/hp_banner_3.jpg" alt="An image of one of the rollercoasters" width="1280" height="376">
-        <img class="banner_image" src="assets/hp_banner_4.jpg" alt="An image of the bumper cars" width="1280" height="376">
-    
-        <h1>The world of fun and excitement awaits!</h1>
-    
-        <a href="rides.html">Learn more</a>
-    </section>
-
-    <!-- Script handles changing the images in the banner-->
-    <script>
-    let bannerIndex = 0;
-    carousel();
-
-    function carousel()
-    {
-        let i;
-        let x = document.getElementsByClassName("banner_image");
-        
-        for(i = 0; i < x.length; i++)
-        {
-            x[i].style.display = "none";
-        }
-
-        bannerIndex++;
-
-        if(bannerIndex > x.length)
-        {
-            bannerIndex = 1;
-        }
-        x[bannerIndex - 1].style.display = "block";
-
-        //2nd parameter is the duration between slides, 7000 = 7 seconds
-        setTimeout(carousel, 7000);
-    }
-    </script>
-
-    <section id="hp-quick-payment">
-        <div class="hp-flex-container">
-            <div>
-                <h2>Quick Payment</h2>
-            </div>
-
-            <div>
-                <h2>Select your plan:</h2>
-                <form>
-                    <input type="radio" id="standard" name="quick_payment" value="Standard">
-                    <label for="standard">Standard</label>
-                    <input type="radio" id="deluxe" name="quick_payment" value="Deluxe">
-                    <label for="deluxe">Deluxe</label>
-                    <input type="radio" id="season_pass" name="quick_payment" value="Season Pass">
-                    <label for="season_pass">Season Pass</label>
-                </form>
-            </div>
-
-            <div>
-                <p class="hp-underline">Checkout</p>
-            </div>
-        </div>
-    </section>
-
-    <main class="hp-flex-container">
-        <section class="hp-content-card">
-            <h2>Offers and Benefits</h2>
-            <img src="assets/hp_offers_benefits.jpg" alt="Image of a mother with her daughter" width="320" height="213">
-            <p>Find a plan that suits you, so you never have to miss a minute.</p>
-            <a href="tickets.html">Get Details</a>
-        </section>
-        
-        <section class="hp-content-card">
-            <h2>Our Rides and Experiences</h2>
-            <img src="assets/hp_rides.jpg" alt="Image showing the theme park and it's rides" width="320" height="213">
-            <p>Get a glimpse into the rides avaiable and the experience before you visit.</p>
-            <a href="rides.html">Learn More</a>
-        </section>
-
-        <section class="hp-content-card">
-            <h2>Event Dates</h2>
-            <img src="assets/hp_event_dates.jpg" alt="Image showing a hotel room" width="320" height="213">
-            <p>PLEASE NOTE: Schedule and park hours subject to change without prior notice.</p>
-            <p class="hp-underline">View Dates</p>
-        </section>
-
-        <section class="hp-content-card">
-            <h2>The Park</h2>
-            <img src="assets/hp_park_map.jpg" alt="Image showing a hotel room" width="320" height="213">
-            <p>Familiarize yourself with the map of the park and learn your way around.</p>
-            <p class="hp-underline">Learn More</p>
-        </section>
-
-        <section class="hp-content-card">
-            <h2>Shop and Merchandise</h2>
-            <img src="assets/hp_shop.jpg" alt="Image showing our on site stores" width="320" height="213">
-            <p>View the merchanise available to purchase online or on site!</p>
-            <p class="hp-underline">View Catalogue</p>
-        </section>
-
-        <section class="hp-content-card">
-            <h2>Nearby Accommodation</h2>
-            <img src="assets/hp_accommodation.jpg" alt="Image showing a hotel room" width="320" height="213">
-            <p>Find affordable hotels nearby and explore guest reviews.</p>
-            <p class="hp-underline">View More</p>
-        </section>
-    </main>
-    
-  <!-- BEGINNING OF GLOBAL FOOTER  -->
-   <footer>
-    <div class="footer-container">
-        <div class="footer">
-            <div class="footer-heading footer-1">
-                <h2>Get Started</h2>
-                <a href="index.html">Home</a>
-                <a href="rides.html">Rides</a>
-                <a href="tickets.html">Tickets</a>
-            </div>
-        </div>
-        <div class="footer">
-            <div class="footer-heading footer-2">
-                <h2>About Us</h2>
-                <a href="index.html">Park Info</a>
-                <a href="mailto:abc@domain.com?subject=feedback" title="click to email" tabindex="3">Contact Us</a>
-                <a href="https://goo.gl/maps/nQ3es5a234grQJxB8">Directions</a>
-            </div>
-        </div>
-        <div class="footer">
-            <div class="footer-heading footer-3">
-                <h2>Social Media</h2>
-                <a href="https://www.instagram.com">Instagram</a>
-                <a href="https://www.facebook.com">Facebook</a>
-                <a href="https://www.twitter.com">Twitter</a>
-            </div>
-        </div>
-        <div class="footer">
-            <div class="footer-heading footer-4">
-                <h2><a href="index.html"><img src="assets/logo.png" alt="UoL Land Logo" width="80" height="100"/></a></h2>
-            </div>
-        </div>
+  <!-- NAV BAR -->
+  <nav>
+    <div class="nav-logo">
+      <img src="assets/images/f1-dark.png" alt="Formula 1 dark logo">
     </div>
-</footer>
-  <!-- END OF GLOBAL FOOTER  -->
+    <div class="nav-links">
+      <a href="index.html">Explore</a>
+      <a href="news.html">News</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="ranking.html">Ranking</a>
+      <a href="about.html">About F1</a>
+    </div>
 
+  </nav>
+  <!-- end of NAV bar -->
+
+  <!-- Header -->
+  <header id="headerHome">
+
+    <div class="header-content">
+      <div class="header-introduction-text">
+        <h3>Formula 1</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+          qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+
+      <a href="#sponsors" class="button">View More</a>
+    </div>
+
+  </header>
+
+  <section id="sponsors">
+      <h3>Partners</h3>
+      <div class="sponsors-img">
+        <img src="assets/images/redbull.png" alt="">
+        <img src="assets/images/bbs.png" alt="">
+        <img src="assets/images/alphatauri.png" alt="">
+        <img src="assets/images/ssr.png" alt="">
+        <img src="assets/images/heuer.png" alt="">
+      </div>
+
+  </section>
+
+
+  <!-- Highlights -->
+  <section id="section-highlights">
+      <!-- link the video  -->
+      <iframe class="video" src="https://www.youtube.com/embed/eokeG5lVAWY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="highlights">
+        <div class="highlights-text">
+          <h3>F1 coming to Netflix</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+  </section>
+
+  <!-- Races -->
+  <section id="section-races">
+
+    <div class="grid-wrapper">
+
+      <div class="box-races box-a">
+        <div class="image-container">
+          <!-- <img src="assets/images/fe-cover.jpg" alt="Formula E preview car"> -->
+        </div>
+        <div class="information-container">
+          <h3>Formula E World Cup is here</h3>
+          <p>
+            Formula E, officially the ABB FIA Formula E World Championship, is a single-seater
+            motorsport championship for electric cars. The series was conceived in 2011 in Paris
+            by FIA president Jean Todt and Spanish businessman Alejandro Agag, who is also the
+            current chairman of Formula E Holdings.
+          </p>
+          <a href="news.html" class="button">Read More</a>
+        </div>
+      </div>
+
+      <div class="box-races box-b">
+        <div class="image-container img-bg01">
+          <!-- <img src="assets/images/news-cover01.jpg" alt="Image of Toto Wolff"> -->
+        </div>
+        <div class="information-container">
+          <h3>Mercedes aim to maintain momentum and pressure on Ferrari and Red Bull</h3>
+          <p>
+            Mercedes boss Toto Wolff hopes his team will be able to challenge Ferrari
+            and Red Bull for wins in the second half of the season which starts this
+            weekend with the Belgian Grand Price.
+          </p>
+          <a href="news.html" class="button">Read More</a>
+        </div>
+      </div>
+
+      <div class="box-races box-b">
+        <div class="image-container img-bg02">
+          <!-- <img src="assets/images/news-cover02.jpg" alt="Image of Formula 1 Ferrari car"> -->
+        </div>
+        <div class="information-container">
+          <h3>Why more Ferrari grid penalties are likely at the Belgian GP</h3>
+          <p>
+            With the reliability of the Ferrari-powered cars being one of the subplots
+            of the season, several drivers find themselves on the edge of taking more grid
+            penalties.
+          </p>
+          <a href="news.html" class="button">Read More</a>
+        </div>
+
+
+      </div>
+
+      <div class="box-races box-b">
+        <div class="image-container img-bg03">
+          <!-- <img src="assets/images/news-cover03.jpg" alt="Image of De la rose redbull driver"> -->
+        </div>
+        <div class="information-container">
+          <h3>De la Rosa: Verstappen can become the best F1 driver of all time</h3>
+          <p>
+            Max Verstappen might only be 24 years old, but the Dutchman already looks to
+            be on course for a second World Championship. According to former F1 driver
+            Pedro de la Rosa
+          </p>
+          <a href="news.html" class="button">Read More</a>
+        </div>
+      </div>
+
+      <div class="box-races box-b">
+        <div class="image-container img-bg04">
+          <!-- <img src="assets/images/news-cover04.jpg" alt="Image of GP Belgium 2022 Circuit"> -->
+        </div>
+        <div class="information-container">
+          <h3>France eliminated, Belgium in danger</h3>
+          <p>
+            The French Grand Prix will indeed be absent from the 2023 Formula 1
+            calendar, confirms Stefano Domenicali. That of Belgium could suffer the
+            same fate.
+          </p>
+          <a href="news.html" class="button">Read More</a>
+      </div>
+    </div>
+  </div>
+
+  </section>
+
+  <!-- News -->
+  <section id="more-news">
+      <div class="intro">
+        <h2>Latest News</h2>
+        <div class="large-line"> </div>
+      </div>
+      <div class="grid-wrapper-news">
+        <div class="box-more-news">
+          <img src="assets/images/news-cover05.jpg" alt="">
+          <h3>Audi will join the Formula 1 World Championship from the 2026 season</h3>
+          <div class="line"></div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum.
+          </p>
+          <a href="news.html" class="button">Read More</a>
+        </div>
+
+
+        <div class="box-more-news">
+          <img src="assets/images/news-cover06.jpg" alt="">
+          <h3>Mercedes are progressing towards that elusive first win of 2022</h3>
+          <div class="line"></div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum.
+          </p>
+          <a href="news.html" class="button">Read More</a>
+        </div>
+
+
+        <div class="box-more-news">
+          <img src="assets/images/news-cover07.jpg" alt="">
+          <h3>Red Bull Team Principal Christian Horner has backed his former driver Daniel Ricciardo</h3>
+          <div class="line"></div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum.
+          </p>
+          <a href="news.html" class="button">Read More</a>
+
+        </div>
+        <div class="box-more-news">
+          <img src="assets/images/news-cover08.jpg" alt="">
+          <h3>Daniel Ricciardo to leave McLaren at the end of the season</h3>
+          <div class="line"></div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum.
+          </p>
+          <a href="news.html" class="button">Read More</a>
+        </div>
+      </div>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <div class="footer-container">
+      <img src="assets/images/f1.png" alt="f1 logo">
+      <div class="footer-box">
+        <span>Explore</span>
+        <span>News</span>
+        <span>Schedule</span>
+        <span>Ranking</span>
+        <span>About F1</span>
+      </div>
+
+      <div class="large-line-red"></div>
+
+      <div class="footer-box">
+        <img src="assets/images/meta.png" alt="meta logo">
+        <img src="assets/images/instagram.png" alt="instagram logo">
+        <img src="assets/images/youtube.png" alt="youtube logo">
+        <img src="assets/images/twitter.png" alt="twitter logo">
+        <img src="assets/images/reddit.png" alt="reddit logo">
+      </div>
+
+      <div class="footer-box">
+        <p>Copyright &copy 2022 Formula F1 - Newslatter magazine</p>
+      </div>
+      <p>+55 555 555 55</p>
+      <p>info@f1support.org</p>
+
+    </div>
+
+  </footer>
+
+
+
+
+</body>
 </html>
