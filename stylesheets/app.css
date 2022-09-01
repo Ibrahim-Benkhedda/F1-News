@@ -12,8 +12,8 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 7vh;
-  background: linear-gradient(to right, #ed213a, #93291e);
+  height: 65px;
+  background: linear-gradient(to right, #15151E, #17171E);
   position: fixed;
   top: 0;
   left: 0;
@@ -35,6 +35,10 @@ nav {
   text-decoration: none;
   letter-spacing: 2px;
   font-weight: 700;
+}
+
+.arrow {
+  color: #ed213a;
 }
 
 .nav-links {
@@ -657,11 +661,44 @@ footer {
 
  /*                RANKING PAGE                 */
 
+
+ .bg-ranking img {
+   /* object-fit: cover; */
+   width: 128px;
+   height: 128px;
+
+ }
+
+.bg-ranking  {
+  width: 100%;
+  height: 400px;
+  margin-top: 10px;
+  padding-bottom: 65px;
+  /* refrence for the background: https://projects.verou.me/css3patterns/#carbon */
+  background:
+  linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+  linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+  linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+  linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+  linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+  linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+  background-color: #131313;
+  background-size: 20px 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
 #section-ranking-table {
    display: flex;
+   flex-direction: column;
    justify-content: center;
    align-items: center;
-   margin:-75px 100px 10px 100px;
+   margin: -125px 100px 10px 100px;
  }
 
 /* styles the whole table */
@@ -680,8 +717,10 @@ footer {
 
 }
 
+
+/* styles every odd number of the table rows */
 #ranking-table tr:nth-child(odd) {
-  background-color: grey;
+  background-color: #F6F6F6;
 }
 
 /* styles each column */
@@ -694,15 +733,201 @@ footer {
 
 }
 
+/* change the size of the team icons in the table */
 #ranking-table .img {
   width: 32px;
 }
 
+/* style the header of the table */
 .table-header th {
+  background-color: #15151E;
+  color: white;
   height: 60px;
 }
 
+/* styles the position row of the table */
 .position {
-  width: 5%;
+  width: 7%;
+}
 
+/* styles the image below the table */
+.ranking-logo {
+  width: 25%;
+}
+
+
+/*                ABOUT F1 PAGE               */
+
+/* styles the header of the about us page */
+#aboutFormula {
+  margin: 150px 10% 100px 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* styles the section of the header where the metadata is located */
+.aboutformula-row.meta-data {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 25px 10px 20px;
+}
+
+/* styles the the red f1 icon in the meta data section of the header  */
+.aboutformula-row.meta-data img {
+  width: 32px;
+  height: auto;
+}
+
+/* styles the 2nd icon of the f1 logo in the meta data section of the header  */
+.aboutformula-row .img-container img:nth-child(2) {
+  /* reduce opacity */
+  opacity: 0.7;
+}
+
+/* styles the 3rd icon of the f1 logo in the meta data section of the header  */
+.aboutformula-row .img-container img:nth-child(3) {
+  /* reduce opacity */
+  opacity: 0.3;
+}
+
+
+.aboutformula-row.meta-data h3 {
+  padding-bottom: 20px;
+  font-size: 2.1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* styles the container of the buttons */
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* styles each button under the buttons class */
+.buttons a {
+  margin-right: 10px;
+}
+
+/* styles the image on the left of the header  */
+.aboutformula-row.img img {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  max-height: 600px;
+  object-fit: cover;
+}
+
+
+/* styles the timeline section */
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  background-color: #111;
+}
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline ul {
+  list-style: none;
+}
+
+.timeline h3 {
+  color: red;
+}
+.timeline ul li {
+  padding: 20px;
+  background-color: #1e1f22;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.timeline ul li:last-child {
+  margin-bottom: 0;
+}
+.timeline-content h1 {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.timeline-content p {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+}
+.timeline-content .date {
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: gray;
+  }
+  .timeline ul li {
+    width: 50%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    border-radius: 20px 0px 20px 20px;
+  }
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+    border-radius: 0px 20px 20px 20px;
+  }
+  .timeline ul li::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: gray;
+    top: 0px;
+  }
+  .timeline ul li:nth-child(odd)::before {
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+  .timeline ul li:nth-child(even)::before {
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+  .timeline-content .date {
+    position: absolute;
+    top: -30px;
+  }
+  .timeline ul li:hover::before {
+    transition: 0.5s;
+    background-color: red;
+  }
 }
