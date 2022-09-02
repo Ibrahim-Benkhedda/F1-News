@@ -56,7 +56,7 @@ nav {
   /* we don't use % with width and height since it only covers the elements not the full size of the view port */
   /* height we use vh to cover the whole height of the current browser and make it resposnive */
   /* remove repetition of the background, size it to cover and position it in the center of the browser */
-  background-image: url("/../assets/images/bg-redbull.jpg");
+  background-image: url("../assets/images/bg-redbull.jpg");
   height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
@@ -228,7 +228,7 @@ nav {
 }
 
 .box-a .image-container {
-  background-image: url("/../assets/images/fe-cover.jpg");
+  background-image: url("../assets/images/fe-cover.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -242,22 +242,22 @@ nav {
 }
 
 .img-bg01 {
-  background-image: url("/../assets/images/news-cover01.jpg");
+  background-image: url("../assets/images/news-cover01.jpg");
 
 }
 
 .img-bg02 {
-  background-image: url("/../assets/images/news-cover02.jpg");
+  background-image: url("../assets/images/news-cover02.jpg");
 
 }
 
 .img-bg03 {
-  background-image: url("/../assets/images/news-cover03.jpg");
+  background-image: url("../assets/images/news-cover03.jpg");
 
 }
 
 .img-bg04 {
-  background-image: url("/../assets/images/news-cover04.jpg");
+  background-image: url("../assets/images/news-cover04.jpg");
 }
 
 .information-container {
@@ -822,9 +822,23 @@ footer {
   object-fit: cover;
 }
 
+/* styles responsive design */
+@media only screen and (max-width: 768px) {
+  #aboutFormula {
+    display: flex;
+    flex-direction: column;
+    margin: 75px 10px 10px 20px;
+  }
+
+  .aboutformula-row.meta-data {
+    width: 100%;
+  }
+}
 
 /* styles the timeline section */
-.container {
+
+
+.container.time {
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -841,8 +855,22 @@ footer {
   position: relative;
 }
 
+#timeline .title {
+  text-align: center;
+  font-size: 1.8em;
+  color: red;
+  font-style: oblique;
+  background-color: #111;
+}
+
 .timeline ul {
   list-style: none;
+}
+
+.timeline img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
 }
 
 .timeline h3 {
@@ -864,6 +892,13 @@ footer {
   line-height: 30px;
   margin-bottom: 10px;
 }
+
+/* styles the caption of the image  */
+.timeline-content h5 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 .timeline-content p {
   font-size: 16px;
   line-height: 30px;
@@ -930,4 +965,163 @@ footer {
     transition: 0.5s;
     background-color: red;
   }
+}
+
+
+ /* styles the FAQ section  */
+
+#faq .container-faq,#faq h1 {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 20% 50px 20%;
+
+}
+
+#faq h1 {
+  font-size: 1.8em;
+}
+
+#faq .col-faq {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+  /* https://border-radius.com/ */
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin: 5px;
+
+}
+
+#faq .col-faq:hover {
+  transition: 0.3s;
+  background-color: #292929;;
+  color: white;
+}
+
+.faq-closed {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.faq-closed img {
+  width: 32px;
+  height: 32px;
+  margin-left: 20px;
+}
+
+#faq h3 {
+  padding: 20px;
+  font-size: 1.7em;
+
+}
+
+#faq .col-faq p {
+  display: none;
+  padding: 0px 20px 10px 20px;
+  font-size: 1.2em;
+}
+
+
+
+#faq .col-faq p.active {
+  display: block;
+}
+
+
+/*                styles the Schedule page         */
+
+#schedule-container {
+  margin: 100px 5% 100px 5%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box-schedule {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  margin: 5px 10px 5px 10px;
+  width: 25%;
+  height: 100%;
+  /* flex: 3; */
+  justify-content: center;
+  border: 1px solid black;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.box-schedule:hover img{
+  transition: 0.5s ease;
+  filter: none !important;
+}
+
+.race-img img{
+  width: 100%;
+  min-height: 200px;
+  object-fit: cover;
+  filter: grayscale(100%) brightness(30%);
+  background-image: url("../assets/images/bg-race01.jpg");
+}
+
+.race-date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.race-date h4 {
+  font-size: 1.5em;
+  padding: 10px;
+  margin-left: 10px;
+  background-color: #E6E6E6;
+  max-width: 125px;
+  height: auto;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.race-date span {
+  margin-left: 10px;
+  font-size: 1.3em;
+
+}
+
+.race-text {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+  width: 80%;
+}
+
+.race-text h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.race-text img {
+  margin-right: 10px;
+}
+
+
+
+
+@media (max-width: 800px) {
+  #schedule-container {
+    flex-direction: column;
+  }
+
+  .box-schedule {
+    width: 100%;
+  }
+
 }
