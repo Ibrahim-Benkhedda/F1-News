@@ -109,6 +109,13 @@ nav {
   text-decoration: none;
 }
 
+@media (max-width: 800px) {
+  .header-introduction-text {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
 /* HIGHLIGHTS */
 
 #section-highlights {
@@ -126,7 +133,7 @@ nav {
   margin: 20px;
   border: solid 2px black;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-
+  object-fit: cover;
 }
 
 .highlights {
@@ -141,12 +148,23 @@ nav {
 
 .highlights h3 {
   font-size: 2.25em;
-  letter-spacing: 3px;
-  line-height: 3;
+  letter-spacing: 1.5px;
 }
 
 .highlights p {
   font-size: 1.4em;
+}
+
+@media (max-width: 800px) {
+  #section-highlights {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .highlights p,h3 {
+    padding: 20px;
+    font-size: 1.2em;
+  }
 }
 
 /* sponsorship */
@@ -160,6 +178,7 @@ nav {
 
 #sponsors img {
   max-width: 150px;
+  object-fit: cover;
   height: auto;
 
 }
@@ -181,20 +200,23 @@ nav {
   justify-content: space-around;
 }
 
+@media (max-width: 800px) {
+  #sponsors img{
+    width: 64px;
+    height: 64px;
+  }
+}
 /* SECTION RACES  */
 
 #section-races {
-  margin: 50px;
-}
-
-#section-races img {
-  width: 20%;
+  margin: 20px 50px 20px 50px;
 }
 
 .grid-wrapper {
   display: grid;
+  grid-area: auto;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1.5fr 1.5fr 0fr;
+  grid-template-rows: 1fr;
   grid-gap: 20px;
 }
 
@@ -207,24 +229,28 @@ nav {
   padding-bottom: 5px;
 }
 
-.box-a:hover, .box-b:hover, .information-container:hover {
+.box-a:hover, .box-b:hover {
   transition: 0.5s;
   background-color: #26282A;
   color: white;
 }
 
-
-
-
 .box-races {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1.4fr 0.6fr;
+  display: flex;
+  flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 5px 22px 4px;
 }
 
-.image-container {
+.box-a .image-container{
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+}
 
+.box-b .image-container {
+  width: 100%;
+  height: 150px;
+  min-height: 200px;
 }
 
 .box-a .image-container {
@@ -275,7 +301,7 @@ nav {
   font-weight: 400;
   font-size:20px;
   line-height:90%;
-  padding-left: 8%;
+  padding-top: 20px;
   padding-bottom:3%;
   border-radius:20px;
 }
@@ -292,11 +318,29 @@ nav {
   border-radius:20px;
 }
 
-.image-container:hover {
-
+@media (max-width: 800px) {
+  #section-races {
+    margin: 10px;
+  }
+  .grid-wrapper {
+    display :flex;
+    flex-direction: column;
+  }
 }
 
-/* section more news innit berv */
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  #section-races {
+    margin: 10px 15px 40px 15px;
+  }
+  .grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.9fr 0.9fr 1.2fr 1fr;
+  }
+}
+
+
+/* section more news */
 
 .grid-wrapper-news {
   display: grid;
@@ -305,24 +349,25 @@ nav {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-gap: 10px 10px;
-  margin: 40px;
+  margin: 100px;
 }
 
 
 .box-more-news {
   /* refrence box shadow */
+  display: flex;
+  flex-direction: column;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-
 }
 
 .intro {
   display: flex;
   flex-direction: row;
-  margin-left: 50px;
-  margin-right: 50px;
+  align-items: center;
+  margin: 40px 50px 20px 50px;
 }
 h2 {
-  width: 15%;
+  min-width: 300px;
   font-size: 2.2em;
 }
 
@@ -331,27 +376,21 @@ h2 {
   font-weight: 400;
   font-size:15px;
   line-height:90%;
-  padding-left: 8%;
-  padding-right: 8%;
-  padding-top:3%;
-  padding-bottom:8%;
+  padding: 20px 15px 10px 20px;
   border-radius:20px;
 }
 
 .box-more-news h3 {
   color: #ed213a;
   font-weight: 600;
-  font-size: 1.6em;
-  padding-left: 8%;
-  padding-right: 8%;
-  padding-top:3%;
-  padding-bottom:2%;
+  font-size: 1.3em;
+  padding: 10px 15px 10px 15px;
 
 }
 
 .box-more-news img {
   width: 100%;
-  height: auto;
+  height: 450px;
   max-height: 200px;
   object-fit: cover;
 }
@@ -359,7 +398,7 @@ h2 {
 .large-line {
   height:2px;
   width:100%;
-  margin:auto;
+  margin: 0;
   background-color: black;
 }
 
@@ -386,8 +425,21 @@ h2 {
   color: white;
 }
 
+@media (max-width: 800px) {
+  .grid-wrapper-news {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  .grid-wrapper-news {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 15px 40px 15px;
+  }
+}
 
 
 /* FOOTER */
@@ -497,27 +549,20 @@ footer {
 
 .container-news-a {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 
-}
-
-.container-news-a, .container-news-b {
-  /* background-color: grey; */
-}
-
-.main-container-news > div:nth-child(odd){
-  /* background-color: rgb(200, 200, 200); */
 }
 
 .box-news-row-a {
   padding-top: 10px;
-  height: 200px;
   display: flex;
 
 }
 
 .img-box {
   z-index: -1;
-  width: 40%;
+  width: 80%;
   height: 100%;
   border: 1px solid black;
   overflow: hidden;
@@ -540,6 +585,19 @@ footer {
   transform: scale(1.1);
 }
 
+.content-box .sub-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.8em;
+}
+
+.sub-content img {
+  width: 16px;
+  height: auto;
+  margin: 7.5px;
+}
+
 .content-box {
   height: 100%;
   width: 100%;
@@ -547,9 +605,18 @@ footer {
   padding: 20px 50px 20px 50px;
 }
 
-.content-box h3, p {
-  padding-bottom: 10px;
+.content-box h3 {
+  padding-bottom: 2px;
 }
+
+.content-box p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  font-size: 1.0em;
+}
+
+
 
 
  /* CONTAINER ROW B */
@@ -568,8 +635,9 @@ footer {
    /* leave space between secondary boxes */
    margin-bottom: 10px;
    width: 100%;
-   height: auto;
-   min-height: 30%;
+   height: 10%;
+   min-height: 400px;
+   /* min-height: 30%; */
    /* border: 1px solid red; */
    display: flex;
    flex-direction: column;
@@ -659,6 +727,19 @@ footer {
  }
 
 
+@media (max-width: 1200px) {
+  /* fixes the margin of the the whole news container */
+  .main-container-news {
+    margin: 75px 10px 50px 10px;
+  }
+  /* removes right news tables */
+  .container-news-b {
+    display: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
  /*                RANKING PAGE                 */
 
 
@@ -700,6 +781,12 @@ footer {
    align-items: center;
    margin: -125px 100px 10px 100px;
  }
+
+@media (max-width: 800px) {
+  #section-ranking-table {
+    margin: -125px 10px 10px 10px;
+  }
+}
 
 /* styles the whole table */
 #ranking-table {
