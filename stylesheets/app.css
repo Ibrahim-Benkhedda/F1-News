@@ -824,7 +824,6 @@ footer a {
 
 
 
-
  /* CONTAINER ROW B */
 
  .container-news-b {
@@ -940,6 +939,22 @@ footer a {
     display: none;
     padding: 0;
     margin: 0;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .box-news-row-a {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .box-news-row-a .img-box {
+    width: 100%;
+  }
+
+  .box-news-row-a .content-box {
+    padding: 15px;
   }
 }
 
