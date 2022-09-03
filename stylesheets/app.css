@@ -1,3 +1,8 @@
+@font-face {
+  font-family: orbitron;
+  src: url("../assets/fonts/Orbitron-Regular.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +10,7 @@
   font-family: monospace;
   scroll-behavior: smooth;
 }
+
 
 nav {
   z-index: 2;
@@ -48,6 +54,60 @@ nav {
   width: 50%;
 }
 
+.burger {
+  display: none;
+}
+
+.burger div{
+  width: 40px;
+  height: 4px;
+  background-color: white;
+  margin: 5px;
+}
+
+@media (max-width: 800px) {
+  .nav-links {
+    transition: transform 0.3s ease-in;
+    /* styles the position and area of the nav bar in mobile mode */
+    position: absolute;
+    right: 0;
+    top: 65px;
+    width: 60%;
+    height: 100vh;
+    /* styles the inside of the nav bar when opened */
+    background: linear-gradient(to right, #15151E, #17171E);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* move it off the screen */
+    transform: translateX(100%);
+  }
+
+  .nav-links a {
+    opacity: 0;
+  }
+
+  .burger {
+    /* display the burger icon */
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX()
+  }
+}
 
 /* LANDING PAGE  */
 
@@ -63,10 +123,63 @@ nav {
   background-size: cover;
   display: flex;
   flex-direction: column;  /* sets the main axis into vertical  */
-  justify-content: center;
   align-items: center;
   text-align: center;
 }
+
+/* styles the container of the upcoming event in header page */
+.container-event {
+  margin-top: 65px;
+  padding: 10px;
+  background-color: #38383F;
+  border-bottom: 1px solid red;
+  border-top: 1px solid red;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+/* styles the date of the upcoming event in the header */
+.event-date h3 {
+  border-radius: 10px;
+  background-color: red;
+  padding: 4px;
+}
+
+/* center the month of the event  */
+.event-date h4 {
+  text-align: center;
+}
+
+/* styles a vertical line */
+.vertical-line {
+  width: 2px;
+  height: 100%;
+  margin: 0px 20px 0 20px;
+  background-color: black;
+}
+
+/* styles the box where it contains the flag, name of the event */
+.event-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  width: 80%;
+}
+
+/* styles the box of where it contains the name of the event ONLY */
+.event-info .info {
+  padding-left: 20px;
+}
+
+/* styles the event name */
+.event-info .info h3 {
+  font-size: 1.8em;
+}
+
 
 .header-content {
   background-color: rgba(0, 0, 0, 0.5);
@@ -95,18 +208,43 @@ nav {
   font-size: 1.2em;
 }
 
+/* styles buttons  */
 .button {
   background-color: red;
   color: white;
-  margin-top: 20px;
-  width: 150px;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2em;
   text-align: center;
   text-decoration: none;
+}
+
+.button:hover {
+  transition: 0.5s ease;
+  background-color: #111;
+  color: white;
+}
+
+.container-event .button {
+  font-size: 1.0em;
+  width: 150px;
+}
+
+.header-content .button {
+  font-size: 1.2em;
+  width: 200px;
+}
+
+.buttons .button {
+  width: 150px;
+  font-size: 1.1em;
+  margin-top: 20px;
+}
+
+/* styles the hot picks and latest news buttons in the main page */
+.information-container .button {
+  width: 100%;
 }
 
 @media (max-width: 800px) {
@@ -119,7 +257,9 @@ nav {
 /* HIGHLIGHTS */
 
 #section-highlights {
-  background: linear-gradient(to right, #ed213a, #000000);
+  /* https://cssgradient.io/ */
+  background: rgb(147,34,34);
+  background: linear-gradient(90deg, rgba(147,34,34,1) 0%, rgba(255,20,20,1) 50%, rgba(82,9,9,1) 100%);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -149,10 +289,17 @@ nav {
 .highlights h3 {
   font-size: 2.25em;
   letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.highlights h4 {
+  margin-bottom: 20px;
 }
 
 .highlights p {
   font-size: 1.4em;
+  padding-right: 10%;
+  margin-bottom: 5px;
 }
 
 @media (max-width: 800px) {
@@ -184,14 +331,18 @@ nav {
 }
 
 #sponsors h3 {
+  margin-top: 10px;
+  padding: 10px;
   display: flex;
-  font-size: 2em;
-  font-style: oblique;
+  font-size: 1.8em;
   font-weight: 600;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   margin-bottom: 20px;
+  background-color: #111;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  color: white;
 }
 
 .sponsors-img {
@@ -223,10 +374,6 @@ nav {
 .box-a {
   grid-column: 1/3;
   grid-row: 1/3;
-}
-
-.box-b {
-  padding-bottom: 5px;
 }
 
 .box-a:hover, .box-b:hover {
@@ -289,20 +436,19 @@ nav {
 .information-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 0 10px 0 10px;
   font-size: 12px;
+  margin-top: 0;
+  margin-bottom: auto;
 }
 
 .information-container h3 {
   color: #ed213a;
-  margin:0px;
+  margin: auto;
   font-weight: 400;
   font-size:20px;
-  line-height:90%;
-  padding-top: 20px;
-  padding-bottom:3%;
+  padding: 5px 20px 5px 20px;
   border-radius:20px;
 }
 
@@ -311,10 +457,7 @@ nav {
   font-weight: 400;
   font-size:15px;
   line-height:90%;
-  padding-left: 8%;
-  padding-right: 8%;
-  padding-top:2%;
-  padding-bottom:8%;
+  padding: 20px;
   border-radius:20px;
 }
 
@@ -349,7 +492,7 @@ nav {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-gap: 10px 10px;
-  margin: 100px;
+  margin: 40px 50px 50px 50px;
 }
 
 
@@ -452,6 +595,13 @@ footer {
   color: white;
 }
 
+/* styles the footer links  */
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+/* styles the container of the footer */
 .footer-container {
   background-color: #232526;
   display: flex;
@@ -498,14 +648,30 @@ footer {
 
 /*                 SECTION FOR NEWS PAGE             */
 
-/* SLIDER */
-
-.slider {
-    height: 80vh;
-    position: relative;
-    z-index: -1;
+#newsHeader {
+  margin-top: 65px;
 }
 
+/* SLIDER */
+
+/* styles the slider container  */
+.slider {
+  position: relative;
+  z-index: -1;
+  border-bottom: 5px solid red;
+}
+
+.slider.news {
+  height: 60vh;
+}
+
+.slider.schedule {
+  height: 50vh;
+  margin-top: 63px;
+  border-top: 5px solid red;
+}
+
+/* styles the images of the slider */
 .slider img {
     object-fit: cover;
     height: 100%;
@@ -515,33 +681,68 @@ footer {
     left: 0;
     opacity: 0;
     transition: opacity .5s;
+    filter: brightness(0.6);
 }
 
+/* display the image that have the "active" class  */
 .slider img.active {
     opacity: 1;
 }
 
-.suivant, .precedent {
-    color: #fff;
-    font-size: 6rem;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
+/* styles the title of the slider */
+.slider h1 {
+  z-index: 1;
+  /* center image W3 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2.5em;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid red;
+  letter-spacing: 1.5px;
+  padding: 25px;
+  border-radius: 10px;
 }
 
-.suivant {
-    right: 1rem;
+/* styles the text on top of the slider of the schedule page */
+.slider .content {
+  z-index: 1;
+  /* center image W3 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2.5em;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid red;
+  letter-spacing: 1.5px;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+
 }
 
-.precedent {
-    left: 1rem;
+.slider h1, .slider h3, .slider h4, .slider h5 {
+  font-family: orbitron;
 }
 
+.slider h3 {
+  font-size: 1.1em;
+}
 
+.slider h4 {
+  font-size: 0.8em;
+}
+
+.slider h5 {
+  font-size: 0.9em;
+}
 
 .main-container-news {
-  margin: 150px;
+  margin: 25px 125px 25px 125px;
   height: auto;
   display: flex;
   flex-direction: row;
@@ -635,7 +836,7 @@ footer {
    /* leave space between secondary boxes */
    margin-bottom: 10px;
    width: 100%;
-   height: 10%;
+   height: 15%;
    min-height: 400px;
    /* min-height: 30%; */
    /* border: 1px solid red; */
@@ -725,7 +926,6 @@ footer {
    margin:auto;
    background-color: #ed213a;
  }
-
 
 @media (max-width: 1200px) {
   /* fixes the margin of the the whole news container */
@@ -945,8 +1145,9 @@ footer {
 #timeline .title {
   text-align: center;
   font-size: 1.8em;
-  color: red;
-  font-style: oblique;
+  color: white;
+  padding: 25px;
+  border-bottom: 1px solid red;
   background-color: #111;
 }
 
@@ -1149,7 +1350,7 @@ footer {
 
 .race-img img{
   width: 100%;
-  min-height: 200px;
+  height: 200px;
   object-fit: cover;
   filter: grayscale(100%) brightness(30%);
   background-image: url("../assets/images/bg-race01.jpg");
@@ -1199,9 +1400,6 @@ footer {
   margin-right: 10px;
 }
 
-
-
-
 @media (max-width: 800px) {
   #schedule-container {
     flex-direction: column;
@@ -1210,5 +1408,4 @@ footer {
   .box-schedule {
     width: 100%;
   }
-
 }

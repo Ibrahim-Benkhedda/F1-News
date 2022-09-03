@@ -12,9 +12,11 @@
 <body>
   <!-- NAV BAR -->
   <nav>
+    <!-- contains the nav bar logo -->
     <div class="nav-logo">
       <img src="assets/images/f1.png" alt="Formula 1 red logo">
     </div>
+    <!-- contains the nav bar links to other pages  -->
     <div class="nav-links">
       <a href="index.html">Explore <span class="arrow"> > </span> </a>
       <a href="news.html">News <span class="arrow"> > </span></a>
@@ -22,18 +24,52 @@
       <a href="ranking.html">Ranking <span class="arrow"> > </span></a>
       <a href="about.html">About F1 <span class="arrow"> > </span></a>
     </div>
-
+    <!-- contains the nav bar burger icon for mobile resolution  -->
+    <div class="burger">
+      <!-- draws each line  -->
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
   </nav>
   <!-- end of NAV bar -->
 
-  <!-- slider section -->
-  <header class="slider">
-    <img src="assets/images/bg-slider00.png" alt="" class="img__slider active">
-    <img src="assets/images/bg-slider01.jpg" alt="" class="img__slider">
-    <img src="assets/images/bg-slider02.jpg" alt="" class="img__slider">
-    <img src="assets/images/news-cover15.jpg" alt="" class="img__slider">
+  <header id="newsHeader">
+    <!-- container for the upcoming event in the header of the page -->
+    <section class="container-event">
+      <!-- contains the date of the upcoming event -->
+      <div class="event-date">
+        <h3>08-11</h3>
+        <h4>Sep</h4>
+      </div>
+      <!-- a vertical line styled in css -->
+      <div class="vertical-line"></div>
+      <!-- contains the name, flag image of the upcoming event -->
+      <div class="event-info">
+        <img src="assets/images/belgium-big.png" alt="rectangular flag of Belgium">
+        <!-- contains name of the event and the location -->
+        <div class="info">
+          <h3>2022 Belgian Grand Prix</h3>
+          <h5>Stavelot, Belgium </h5>
+        </div>
+      </div>
 
+      <!-- button that takes you to the schedule page -->
+      <a href="schedule.html" class="button">View Full Schedule</a>
+    </section>
+
+    <!-- slider section -->
+    <section class="slider news">
+      <!-- title of the slider -->
+      <h1>EXPLORE LATEST NEWS</h1>
+      <img src="assets/images/bg-slider00.png" alt="" class="img__slider active">
+      <img src="assets/images/bg-slider01.jpg" alt="" class="img__slider">
+      <img src="assets/images/bg-slider02.jpg" alt="" class="img__slider">
+      <img src="assets/images/news-cover15.jpg" alt="" class="img__slider">
+      <img src="assets/images/news-cover10.jpg" alt="" class="img__slider">
+    </section>
   </header>
+
 
   <section class="main-container-news">
     <div class="container-news-a">
@@ -400,55 +436,6 @@
         </div>
       </div>
 
-      <div class="box-news-row-a">
-        <div class="img-box">
-          <img src="assets/images/news-cover16.jpg" alt="">
-        </div>
-
-        <div class="content-box">
-          <h3>Wolff shares 'rare' Hamilton claim after dramatic clash with Alonso</h3>
-          <div class="sub-content">
-            <img src="assets/images/pen.png" alt="pen icon"> Ricardo Lewis
-            <img src="assets/images/clock.png" alt="clock icon">23/07/2022
-          </div>
-          <div class="large-line-red"></div>
-          <p>
-          Mercedes Team Principal Toto Wolff shares "rare" claim from Lewis Hamilton
-          that he was to blame for the crash with Fernando Alonso, which took him out
-          on the opening lap of the Belgian Grand Prix.
-          </p>
-          <div class="large-line-red"></div>
-          <div class="sub-content">
-            <img src="assets/images/comments.png" alt="comment icon">comments
-          </div>
-
-        </div>
-      </div>
-
-      <div class="box-news-row-a">
-        <div class="img-box">
-          <img src="assets/images/news-cover16.jpg" alt="">
-        </div>
-
-        <div class="content-box">
-          <h3>Wolff shares 'rare' Hamilton claim after dramatic clash with Alonso</h3>
-          <div class="sub-content">
-            <img src="assets/images/pen.png" alt="pen icon"> Ricardo Lewis
-            <img src="assets/images/clock.png" alt="clock icon">23/07/2022
-          </div>
-          <div class="large-line-red"></div>
-          <p>
-          Mercedes Team Principal Toto Wolff shares "rare" claim from Lewis Hamilton
-          that he was to blame for the crash with Fernando Alonso, which took him out
-          on the opening lap of the Belgian Grand Prix.
-          </p>
-          <div class="large-line-red"></div>
-          <div class="sub-content">
-            <img src="assets/images/comments.png" alt="comment icon">comments
-          </div>
-
-        </div>
-      </div>
 
     </div>
     <div class="container-news-b">
@@ -493,19 +480,19 @@
           <div class="card-news">
             <h4>13:00 29/08/2022</h4>
             <p>
-            Leclerc offers grim assessment of title chances as Verstappen surges clear
+            Sainz highlights the issues facing Ferrari at the Dutch GP
             </p>
           </div>
           <div class="card-news">
             <h4>13:00 29/08/2022</h4>
             <p>
-            Leclerc offers grim assessment of title chances as Verstappen surges clear
+            Leclerc offers grim asseVerstappen snatches pole from Leclerc for the Dutch GP
             </p>
           </div>
           <div class="card-news">
             <h4>13:00 29/08/2022</h4>
             <p>
-            Leclerc offers grim assessment of title chances as Verstappen surges clear
+            Marko closes the Red Bull door on Schumacher
             </p>
           </div>
         </div>
@@ -530,7 +517,7 @@
             <div class="vertical-line-red"></div>
             <img src="assets/images/driver.png" alt="driver with helmet logo">
             <div class="vertical-line-red"></div>
-            <p>Max Verstappen</p>
+            <p>Sergio Perez</p>
             <div class="vertical-line-red"></div>
             <span class="ranking-score">301</span>
           </div>
@@ -539,7 +526,7 @@
             <div class="vertical-line-red"></div>
             <img src="assets/images/driver.png" alt="driver with helmet logo">
             <div class="vertical-line-red"></div>
-            <p>Max Verstappen</p>
+            <p>Charles Leclerc	</p>
             <div class="vertical-line-red"></div>
             <span class="ranking-score">301</span>
           </div>
@@ -548,7 +535,7 @@
             <div class="vertical-line-red"></div>
             <img src="assets/images/driver.png" alt="driver with helmet logo">
             <div class="vertical-line-red"></div>
-            <p>Max Verstappen</p>
+            <p>Carlos Sainz</p>
             <div class="vertical-line-red"></div>
             <span class="ranking-score">301</span>
           </div>
@@ -557,7 +544,7 @@
             <div class="vertical-line-red"></div>
             <img src="assets/images/driver.png" alt="driver with helmet logo">
             <div class="vertical-line-red"></div>
-            <p>Max Verstappen</p>
+            <p> George Russell</p>
             <div class="vertical-line-red"></div>
             <span class="ranking-score">301</span>
           </div>
@@ -566,7 +553,7 @@
             <div class="vertical-line-red"></div>
             <img src="assets/images/driver.png" alt="driver with helmet logo">
             <div class="vertical-line-red"></div>
-            <p>Max Verstappen</p>
+            <p>Lewis Hamilton</p>
             <div class="vertical-line-red"></div>
             <span class="ranking-score">301</span>
           </div>
@@ -575,7 +562,7 @@
             <div class="vertical-line-red"></div>
             <img src="assets/images/driver.png" alt="driver with helmet logo">
             <div class="vertical-line-red"></div>
-            <p>Max Verstappen</p>
+            <p>	Lando Norris</p>
             <div class="vertical-line-red"></div>
             <span class="ranking-score">301</span>
           </div>
@@ -584,7 +571,7 @@
             <div class="vertical-line-red"></div>
             <img src="assets/images/driver.png" alt="driver with helmet logo">
             <div class="vertical-line-red"></div>
-            <p>Max Verstappen</p>
+            <p>Esteban Ocon</p>
             <div class="vertical-line-red"></div>
             <span class="ranking-score">301</span>
           </div>
@@ -593,7 +580,7 @@
             <div class="vertical-line-red"></div>
             <img src="assets/images/driver.png" alt="driver with helmet logo">
             <div class="vertical-line-red"></div>
-            <p>Max Verstappen</p>
+            <p>Fernando Alonso</p>
             <div class="vertical-line-red"></div>
             <span class="ranking-score">301</span>
           </div>
@@ -602,28 +589,13 @@
             <div class="vertical-line-red"></div>
             <img src="assets/images/driver.png" alt="driver with helmet logo">
             <div class="vertical-line-red"></div>
-            <p>Max Verstappen</p>
+            <p>Valtteri Bottas</p>
             <div class="vertical-line-red"></div>
             <span class="ranking-score">301</span>
           </div>
         </div>
         <a href="ranking.html" class="button">Show more</a>
       </div>
-
-      <div class="secondary-box row-b">
-        <!-- title -->
-        <h3>Schedule</h3>
-        <!-- meta data -->
-        <div class="box-news row-b">
-          <div class="card-news"></div>
-          <div class="card-news"></div>
-          <div class="card-news"></div>
-          <div class="card-news"></div>
-          <div class="card-news"></div>
-        </div>
-        <a href="schedule.html" class="button">Show more</a>
-      </div>
-
     </div>
   </section>
 
@@ -637,12 +609,13 @@
   <footer>
     <div class="footer-container">
       <img src="assets/images/f1.png" alt="f1 logo">
+      <!-- contains the pages links  -->
       <div class="footer-box">
-        <span>Explore</span>
-        <span>News</span>
-        <span>Schedule</span>
-        <span>Ranking</span>
-        <span>About F1</span>
+        <a href="index.html"><span>Explore</span></a>
+        <a href="#newsHeader"><span>News</span></a>
+        <a href="schedule.html"><span>Schedule</span></a>
+        <a href="ranking.html"><span>Ranking</span></a>
+        <a href="about.html"><span>About F1</span></a>
       </div>
 
       <div class="large-line-red"></div>

@@ -11,9 +11,11 @@
 <body>
   <!-- NAV BAR -->
   <nav>
+    <!-- contains the nav bar logo -->
     <div class="nav-logo">
       <img src="assets/images/f1.png" alt="Formula 1 red logo">
     </div>
+    <!-- contains the nav bar links to other pages  -->
     <div class="nav-links">
       <a href="index.html">Explore <span class="arrow"> > </span> </a>
       <a href="news.html">News <span class="arrow"> > </span></a>
@@ -21,15 +23,35 @@
       <a href="ranking.html">Ranking <span class="arrow"> > </span></a>
       <a href="about.html">About F1 <span class="arrow"> > </span></a>
     </div>
-
+    <!-- contains the nav bar burger icon for mobile resolution  -->
+    <div class="burger">
+      <!-- draws each line  -->
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
   </nav>
   <!-- end of NAV bar -->
 
-  <header>
-
+  <header id="scheduleHeader">
+    <!-- slider section -->
+    <section class="slider schedule">
+      <!-- title of the slider -->
+      <div class="content">
+        <h3>BELGIUM GRAND PRIX</h3>
+        <h4>2022</h4>
+        <h5>26-28 Aug</h5>
+      </div>
+      <img src="assets/images/bg-belgium00.jpg" alt="" class="img__slider active">
+      <img src="assets/images/bg-belgium01.jpg" alt="" class="img__slider">
+      <img src="assets/images/bg-belgium02.jpg" alt="" class="img__slider">
+      <img src="assets/images/news-cover15.jpg" alt="" class="img__slider">
+      <img src="assets/images/news-cover10.jpg" alt="" class="img__slider">
+    </section>
   </header>
 
   <main id="schedule">
+
 
     <!-- section where it contains all the schedules of the upcoming races -->
     <section id="schedule-container">
@@ -71,7 +93,7 @@
       </div>
       <div class="box-schedule">
         <div class="race-img">
-          <img class="bg-race" src="assets/images/bg-race01.jpg" alt="picture of an F1 race in black and grey color">
+          <img class="bg-race" src="assets/images/bg-race02.jpg" alt="picture of an F1 race in UK circuit">
         </div>
         <div class="race-date">
           <h4>27-29</h4>
@@ -90,7 +112,7 @@
 
       <div class="box-schedule">
         <div class="race-img">
-          <img class="bg-race" src="assets/images/bg-race01.jpg" alt="picture of an F1 race in black and grey color">
+          <img class="bg-race" src="assets/images/bg-race03.jpg" alt="picture of an F1 race in france grand prixr">
         </div>
         <div class="race-date">
           <h4>27-29</h4>
@@ -109,7 +131,7 @@
 
       <div class="box-schedule">
         <div class="race-img">
-          <img class="bg-race" src="assets/images/bg-race01.jpg" alt="picture of an F1 race in black and grey color">
+          <img class="bg-race" src="assets/images/bg-race04.jpg" alt="picture of an F1 race in black and grey color">
         </div>
         <div class="race-date">
           <h4>27-29</h4>
@@ -128,7 +150,7 @@
 
       <div class="box-schedule">
         <div class="race-img">
-          <img class="bg-race" src="assets/images/bg-race01.jpg" alt="picture of an F1 race in black and grey color">
+          <img class="bg-race" src="assets/images/bg-race05.jpg" alt="picture of an F1 race in black and grey color">
         </div>
         <div class="race-date">
           <h4>27-29</h4>
@@ -154,12 +176,13 @@
   <footer>
     <div class="footer-container">
       <img src="assets/images/f1.png" alt="f1 logo">
+      <!-- contains the pages links  -->
       <div class="footer-box">
-        <span>Explore</span>
-        <span>News</span>
-        <span>Schedule</span>
-        <span>Ranking</span>
-        <span>About F1</span>
+        <a href="index.html"><span>Explore</span></a>
+        <a href="news.html"><span>News</span></a>
+        <a href="#scheduleHeader"><span>Schedule</span></a>
+        <a href="ranking.html"><span>Ranking</span></a>
+        <a href="about.html"><span>About F1</span></a>
       </div>
 
       <div class="large-line-red"></div>
@@ -181,5 +204,6 @@
     </div>
 
   </footer>
+  <script src="scripts/app.js"></script>
 </body>
 </html>

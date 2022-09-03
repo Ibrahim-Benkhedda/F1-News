@@ -11,9 +11,11 @@
 <body>
   <!-- NAV BAR -->
   <nav>
+    <!-- contains the nav bar logo -->
     <div class="nav-logo">
       <img src="assets/images/f1.png" alt="Formula 1 red logo">
     </div>
+    <!-- contains the nav bar links to other pages  -->
     <div class="nav-links">
       <a href="index.html">Explore <span class="arrow"> > </span> </a>
       <a href="news.html">News <span class="arrow"> > </span></a>
@@ -21,11 +23,17 @@
       <a href="ranking.html">Ranking <span class="arrow"> > </span></a>
       <a href="about.html">About F1 <span class="arrow"> > </span></a>
     </div>
-
+    <!-- contains the nav bar burger icon for mobile resolution  -->
+    <div class="burger">
+      <!-- draws each line  -->
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
   </nav>
   <!-- end of NAV bar -->
 
-  <header class="bg-ranking">
+  <header id="headerRanking" class="bg-ranking">
     <h1>F1 Ranking 2022</h1>
     <p> Silverstone United Kingdom</p>
     <img src="assets/images/silverstoneCircuit.png" alt="silver stone circuit preview">
@@ -181,12 +189,13 @@
   <footer>
     <div class="footer-container">
       <img src="assets/images/f1.png" alt="f1 logo">
+      <!-- contains the pages links  -->
       <div class="footer-box">
-        <span>Explore</span>
-        <span>News</span>
-        <span>Schedule</span>
-        <span>Ranking</span>
-        <span>About F1</span>
+        <a href="index.html"><span>Explore</span></a>
+        <a href="news.html"><span>News</span></a>
+        <a href="schedule.html"><span>Schedule</span></a>
+        <a href="#headerRanking"><span>Ranking</span></a>
+        <a href="about.html"><span>About F1</span></a>
       </div>
 
       <div class="large-line-red"></div>
@@ -208,5 +217,6 @@
     </div>
 
   </footer>
+  <script src="scripts/app.js"></script>
 </body>
 </html>
