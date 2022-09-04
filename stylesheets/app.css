@@ -12,6 +12,7 @@
 }
 
 
+/* styles the nav bar */
 nav {
   z-index: 2;
   position: fixed;
@@ -26,6 +27,7 @@ nav {
   right: 0;
 }
 
+/* styles the logo of the nav bar */
 .nav-logo img {
   z-index: 2;
   display: flex;
@@ -34,7 +36,7 @@ nav {
 }
 
 
-
+/* styles the text of links of the nav bar */
 .nav-links a {
   z-index: 2;
   color: white;
@@ -43,10 +45,12 @@ nav {
   font-weight: 700;
 }
 
+/* styles the arrow sign in the links  */
 .arrow {
   color: #ed213a;
 }
 
+/* styles the position of nav links  */
 .nav-links {
   z-index: 2;
   display: flex;
@@ -54,10 +58,13 @@ nav {
   width: 49%;
 }
 
+/* hides the burger icon when it's not mobile display */
 .burger {
   display: none;
 }
 
+
+/* styles burger lines */
 .burger div{
   width: 40px;
   height: 4px;
@@ -65,7 +72,9 @@ nav {
   margin: 5px;
 }
 
+
 @media (max-width: 800px) {
+  /* styles the menu of the nav bar */
   .nav-links {
     transition: transform 0.3s ease-in;
     /* styles the position and area of the nav bar in mobile mode */
@@ -83,6 +92,7 @@ nav {
     transform: translateX(100%);
   }
 
+  /* hides the nav links  */
   .nav-links a {
     opacity: 0;
   }
@@ -94,10 +104,12 @@ nav {
   }
 }
 
+/* display the mobile nav menu */
 .nav-active {
   transform: translateX(0%);
 }
 
+/* navigation link fade animation */
 @keyframes navLinkFade {
   from {
     opacity: 0;
@@ -109,7 +121,7 @@ nav {
   }
 }
 
-/* LANDING PAGE  */
+/*               LANDING PAGE              */
 
 #headerHome {
   /* gets the image */
@@ -180,7 +192,7 @@ nav {
   font-size: 1.8em;
 }
 
-
+/* styles the header container  */
 .header-content {
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
@@ -193,10 +205,12 @@ nav {
   line-height: 2;
 }
 
+/* styles the h3 of the header container */
 .header-content h3 {
   font-size: 1.4em;
 }
 
+/* styles the text on the landing page  */
 .header-introduction-text {
   display: flex;
   flex-direction: column;  /* sets the main axis into vertical  */
@@ -208,9 +222,9 @@ nav {
   font-size: 1.2em;
 }
 
-/* styles buttons  */
+/*            styles buttons            */
 .button {
-  background-color: red;
+  background-color: rgba(255,20,20,1);
   color: white;
   height: 50px;
   display: flex;
@@ -220,22 +234,27 @@ nav {
   text-decoration: none;
 }
 
+/* styles button on hover */
 .button:hover {
   transition: 0.5s ease;
   background-color: #111;
   color: white;
 }
 
+
+/* styles the button of the upcoming event in the header of the page */
 .container-event .button {
   font-size: 1.0em;
   width: 150px;
 }
 
+/* styles the button of the introduction text in the landing page */
 .header-content .button {
   font-size: 1.2em;
   width: 200px;
 }
 
+/* styles the buttons of about F1 page */
 .buttons .button {
   width: 150px;
   font-size: 1.1em;
@@ -248,14 +267,16 @@ nav {
 }
 
 @media (max-width: 800px) {
+  /* styles the home page text */
   .header-introduction-text {
     width: 100%;
     padding: 10px;
   }
 }
 
-/* HIGHLIGHTS */
+/* Video Section*/
 
+/* styles the video section container */
 #section-highlights {
   /* https://cssgradient.io/ */
   background: rgb(147,34,34);
@@ -267,6 +288,7 @@ nav {
   z-index: -1;
 }
 
+/* styles the video  */
 .video {
   width: 90%;
   height: 50vh;
@@ -276,6 +298,7 @@ nav {
   object-fit: cover;
 }
 
+/* styles the text container  */
 .highlights {
   color: white;
   width: 100%;
@@ -286,16 +309,19 @@ nav {
   align-items: center;
 }
 
+/* styles the h3 video area*/
 .highlights h3 {
   font-size: 2.25em;
   letter-spacing: 1.5px;
   margin-bottom: 10px;
 }
 
+/* styles the h4 of the video area*/
 .highlights h4 {
   margin-bottom: 20px;
 }
 
+/* styles the p of the video area */
 .highlights p {
   font-size: 1.4em;
   padding-right: 10%;
@@ -303,11 +329,13 @@ nav {
 }
 
 @media (max-width: 800px) {
+  /* styles the video section  */
   #section-highlights {
     display: flex;
     flex-direction: column;
   }
 
+  /* styles the text of the video area section */
   .highlights p,h3 {
     padding: 20px;
     font-size: 1.2em;
@@ -316,6 +344,7 @@ nav {
 
 /* sponsorship */
 
+/* styles the sponsors section container */
 #sponsors {
   display: flex;
   flex-direction: column;
@@ -323,6 +352,7 @@ nav {
   align-items: center;
 }
 
+/* styles the image of the sponsors section */
 #sponsors img {
   max-width: 150px;
   object-fit: cover;
@@ -330,6 +360,7 @@ nav {
 
 }
 
+/* styles the h3 of the sponsors section */
 #sponsors h3 {
   margin-top: 10px;
   padding: 10px;
@@ -345,6 +376,7 @@ nav {
   color: white;
 }
 
+/* styles the image CONTAINER of the sponsors section */
 .sponsors-img {
   width: 100%;
   display: flex;
@@ -352,17 +384,20 @@ nav {
 }
 
 @media (max-width: 800px) {
+  /* changes size of the sponsors images */
   #sponsors img{
     width: 64px;
     height: 64px;
   }
 }
-/* SECTION RACES  */
+/* SECTION HOT PICKS  */
 
+/* styles the hot picks section */
 #section-races {
   margin: 20px 50px 20px 50px;
 }
 
+/* styles the container of the all boxes of the hot picks news */
 .grid-wrapper {
   display: grid;
   grid-area: auto;
@@ -370,43 +405,46 @@ nav {
   grid-template-rows: 1fr;
   grid-gap: 20px;
 }
-
+/* styles the left box card */
 .box-a {
   grid-column: 1/3;
   grid-row: 1/3;
 }
-
 .box-a:hover, .box-b:hover {
   transition: 0.5s;
   background-color: #26282A;
   color: white;
 }
 
+/* styles the all news boxes of the hot picks section */
 .box-races {
   display: flex;
   flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 5px 22px 4px;
 }
 
+/* styles the image container of left card  */
 .box-a .image-container{
   width: 100%;
   height: 100%;
   min-height: 200px;
 }
 
+/* styles all the image container of right card  */
 .box-b .image-container {
   width: 100%;
   height: 150px;
   min-height: 200px;
 }
 
+/* styles the image container of left card  */
 .box-a .image-container {
   background-image: url("../assets/images/fe-cover.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-
+/* styles all the image container of right card  */
 .box-b .image-container {
   background-repeat: no-repeat;
   background-size: cover;
@@ -414,25 +452,21 @@ nav {
   max-height: 224px;
 }
 
+/* set backgrounds to the boxes */
 .img-bg01 {
   background-image: url("../assets/images/news-cover01.jpg");
-
 }
-
 .img-bg02 {
   background-image: url("../assets/images/news-cover02.jpg");
-
 }
-
 .img-bg03 {
   background-image: url("../assets/images/news-cover03.jpg");
-
 }
-
 .img-bg04 {
   background-image: url("../assets/images/news-cover04.jpg");
 }
 
+/* styles the meta data  */
 .information-container {
   display: flex;
   flex-direction: column;
@@ -442,7 +476,6 @@ nav {
   margin-top: 0;
   margin-bottom: auto;
 }
-
 .information-container h3 {
   color: #ed213a;
   margin: auto;
@@ -451,7 +484,6 @@ nav {
   padding: 5px 20px 5px 20px;
   border-radius:20px;
 }
-
 .information-container p {
   /* refrence interactive cards */
   font-weight: 400;
@@ -462,19 +494,24 @@ nav {
 }
 
 @media (max-width: 800px) {
+  /* styles the the whole section  */
   #section-races {
     margin: 10px;
   }
+  /* styles the container of the hot news section */
   .grid-wrapper {
     display :flex;
     flex-direction: column;
   }
 }
 
+/* for width between 800 and 1200 */
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
+  /* styles the the whole section  */
   #section-races {
     margin: 10px 15px 40px 15px;
   }
+  /* styles the container of the hot news section */
   .grid-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -485,6 +522,7 @@ nav {
 
 /* section more news */
 
+/* styles the container of the more news section */
 .grid-wrapper-news {
   display: grid;
   grid-auto-columns: 1fr;
@@ -495,7 +533,7 @@ nav {
   margin: 40px 50px 50px 50px;
 }
 
-
+/* styles the box of the more news section */
 .box-more-news {
   /* refrence box shadow */
   display: flex;
@@ -503,6 +541,7 @@ nav {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
+/* styles the title of the section  */
 .intro {
   display: flex;
   flex-direction: row;
@@ -514,6 +553,7 @@ nav {
   font-size: 2.2em;
 }
 
+/* styles the meta data of the latest news section */
 .box-more-news p{
   color: black;
   font-weight: 400;
@@ -522,7 +562,6 @@ nav {
   padding: 20px 15px 10px 20px;
   border-radius:20px;
 }
-
 .box-more-news h3 {
   color: #ed213a;
   font-weight: 600;
@@ -530,7 +569,7 @@ nav {
   padding: 10px 15px 10px 15px;
 
 }
-
+/* styles the image of the cards of the latest news section */
 .box-more-news img {
   width: 100%;
   height: 450px;
@@ -538,13 +577,13 @@ nav {
   object-fit: cover;
 }
 
+/* styles lines  */
 .large-line {
   height:2px;
   width:100%;
   margin: 0;
   background-color: black;
 }
-
 .line {
   height:3px;
   width: 90%;
@@ -552,12 +591,12 @@ nav {
   background-color: black;
 }
 
+/* styles news boxes when hovered */
 .box-more-news:hover {
   transition: 0.5s;
   background-color: #26282A;
-
 }
-
+/* styles line news boxes when hovered */
 .box-more-news:hover .line{
   transition: 1s;
   background-color: #ed213a;
@@ -569,14 +608,18 @@ nav {
 }
 
 @media (max-width: 800px) {
+  /* styles the latest news section */
   .grid-wrapper-news {
     display: flex;
     flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
 
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
+  /* styles the latest news section */
   .grid-wrapper-news {
     display: flex;
     flex-direction: column;
@@ -610,33 +653,35 @@ footer a {
   align-items: center;
 }
 
+/* styles the footer rows  */
 .footer-box {
   padding-bottom: 25px;
   padding-top: 10px;
 
 }
 
+/* styles the images of the footer  */
 .footer-box img {
   padding: 0px 5px 0px 5px;
 }
-
 .footer-box img:hover {
   transition: 0.5s;
   transform: scale(1.15);
 }
 
+/* styles the links of the footer */
 .footer-container span {
   font-size: 1.4em;
   letter-spacing: 1.2px;
   padding: 0px 5px 0px 5px;
 }
-
 .footer-container span:hover {
   transition: 0.3s;
   color: #ed213a;
   border-bottom: 1px dotted #ed213a;
 }
 
+/* styles large red line  */
 .large-line-red {
   height:2px;
   width:100%;
@@ -650,9 +695,8 @@ footer a {
   }
 }
 
-
 /*                 SECTION FOR NEWS PAGE             */
-
+/* styles the header of the news page  */
 #newsHeader {
   margin-top: 65px;
 }
@@ -666,10 +710,12 @@ footer a {
   border-bottom: 5px solid red;
 }
 
+/* styles the slider on the news page  */
 .slider.news {
   height: 60vh;
 }
 
+/* styles the slider on the schedule page  */
 .slider.schedule {
   height: 50vh;
   margin-top: 63px;
@@ -730,22 +776,21 @@ footer a {
 
 }
 
+/* styles the headers of the sliders  */
 .slider h1, .slider h3, .slider h4, .slider h5 {
   font-family: orbitron;
 }
-
 .slider h3 {
   font-size: 1.1em;
 }
-
 .slider h4 {
   font-size: 0.8em;
 }
-
 .slider h5 {
   font-size: 0.9em;
 }
 
+/* styles the main container of the news page  */
 .main-container-news {
   margin: 25px 125px 25px 125px;
   height: auto;
@@ -753,19 +798,21 @@ footer a {
   flex-direction: row;
 }
 
+/* styles the left news sectino of the news page  */
 .container-news-a {
   width: 100%;
   display: flex;
   flex-direction: column;
-
 }
 
+/* styles each box of the left news page  */
 .box-news-row-a {
   padding-top: 10px;
   display: flex;
 
 }
 
+/* styles the image container */
 .img-box {
   z-index: -1;
   width: 80%;
@@ -773,7 +820,7 @@ footer a {
   border: 1px solid black;
   overflow: hidden;
 }
-
+/* styles the image of the image container */
 .img-box img {
   z-index: -1;
   object-fit: cover;
@@ -781,16 +828,18 @@ footer a {
   width: 100%;
 }
 
+/* styles the box of the left news when hovered */
 .box-news-row-a:hover {
   transition: transform .5s ease;
 }
-
+/* scale the picture */
 .box-news-row-a:hover img {
   z-index: 1;
   transition: transform .5s ease;
   transform: scale(1.1);
 }
 
+/* styles the author and time text */
 .content-box .sub-content {
   display: flex;
   flex-direction: row;
@@ -798,23 +847,23 @@ footer a {
   font-size: 0.8em;
 }
 
+/* styles the icon of author and text */
 .sub-content img {
   width: 16px;
   height: auto;
   margin: 7.5px;
 }
 
+/* styles the meta data of the left news section */
 .content-box {
   height: 100%;
   width: 100%;
   border: 1px solid black;
   padding: 20px 50px 20px 50px;
 }
-
 .content-box h3 {
   padding-bottom: 2px;
 }
-
 .content-box p {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -823,45 +872,42 @@ footer a {
 }
 
 
-
- /* CONTAINER ROW B */
-
- .container-news-b {
-   padding-top: 10px;
-   padding-left: 10px;
-   width: 40%;
-   display: flex;
-   flex-direction: column;
-
-
+/* styles the right section of the news page */
+.container-news-b {
+  padding-top: 10px;
+  padding-left: 10px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
  }
 
- .secondary-box.row-b{
-   /* leave space between secondary boxes */
-   margin-bottom: 10px;
-   width: 100%;
-   height: 15%;
-   min-height: 400px;
-   /* min-height: 30%; */
-   /* border: 1px solid red; */
-   display: flex;
-   flex-direction: column;
-   box-shadow: 0 14px 28px rgba(0,0,0,0.25);
-   background-color: #15151E;
-   justify-content: center;
+/* styles the boxes "latest news and results" */
+.secondary-box.row-b{
+ /* leave space between secondary boxes */
+  margin-bottom: 10px;
+  width: 100%;
+  height: 15%;
+  min-height: 400px;
+  /* min-height: 30%; */
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+  background-color: #15151E;
+  justify-content: center;
 
  }
-
- .secondary-box.row-b h3 {
-    background-color: #ed213a;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.7em;
-    font-weight: 600;
-    color: white;
-    border: 2px solid rgba(0, 0, 0, 0.5);
+/* styles the title  */
+.secondary-box.row-b h3 {
+  background-color: #ed213a;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7em;
+  font-weight: 600;
+  color: white;
+  border: 2px solid rgba(0, 0, 0, 0.5);
  }
 
 /* LATEST NEWS  */
@@ -944,15 +990,16 @@ footer a {
 
 
 @media (max-width: 800px) {
+  /* styles the rows of each box news rows  */
   .box-news-row-a {
     display: flex;
     flex-direction: column;
   }
-
+  /* styles the img container of the boxes of right news section */
   .box-news-row-a .img-box {
     width: 100%;
   }
-
+  /* changes the padding  */
   .box-news-row-a .content-box {
     padding: 15px;
   }
@@ -960,14 +1007,13 @@ footer a {
 
  /*                RANKING PAGE                 */
 
-
+/* styles the image of the background of the ranking page */
  .bg-ranking img {
    padding-top: 5px;
    width: 100px;
    height: 100px;
-
  }
-
+ /* styles the background of the ranking page */
 .bg-ranking  {
   width: 100%;
   height: 400px;
@@ -991,7 +1037,7 @@ footer a {
 }
 
 
-
+/* styles the section of the table of the ranking page  */
 #section-ranking-table {
    display: flex;
    flex-direction: column;
@@ -1001,6 +1047,7 @@ footer a {
  }
 
 @media (max-width: 800px) {
+  /* reduces the margin of the section  */
   #section-ranking-table {
     margin: -125px 10px 10px 10px;
   }
@@ -1014,15 +1061,6 @@ footer a {
   border-collapse: collapse;
   border: 2px solid black;
 }
-
-/* styles rows  */
-#ranking-table tr {
-  /* border-bottom: 1px solid black;
-  border-top: 1px solid black; */
-
-}
-
-
 /* styles every odd number of the table rows */
 #ranking-table tr:nth-child(odd) {
   background-color: #F6F6F6;
@@ -1098,7 +1136,7 @@ footer a {
   opacity: 0.3;
 }
 
-
+/* styles the h3 of the meta data section of the header */
 .aboutformula-row.meta-data h3 {
   padding-bottom: 20px;
   font-size: 2.1em;
@@ -1141,8 +1179,7 @@ footer a {
 }
 
 /* styles the timeline section */
-
-
+/* code is based and adapted from: */
 .container.time {
   min-height: 100vh;
   width: 100%;
@@ -1152,6 +1189,7 @@ footer a {
   padding: 100px 0;
   background-color: #111;
 }
+/* styles the timeline container */
 .timeline {
   width: 80%;
   height: auto;
@@ -1160,6 +1198,7 @@ footer a {
   position: relative;
 }
 
+/* styles the title of the timeline section */
 #timeline .title {
   text-align: center;
   font-size: 1.8em;
@@ -1169,19 +1208,23 @@ footer a {
   background-color: #111;
 }
 
+/* styles the unordered list of the timeline section */
 .timeline ul {
   list-style: none;
 }
 
+/* styles the img of the timeline section */
 .timeline img {
   width: 100%;
   max-height: 300px;
   object-fit: cover;
 }
 
+/* styles the h3 of the timeline section */
 .timeline h3 {
   color: red;
 }
+/* styles the lists and unordered list of the timeline section */
 .timeline ul li {
   padding: 20px;
   background-color: #1e1f22;
@@ -1204,12 +1247,13 @@ footer a {
   text-align: center;
   margin-bottom: 10px;
 }
-
+/* styles the meta-data of the timeline section */
 .timeline-content p {
   font-size: 16px;
   line-height: 30px;
   font-weight: 300;
 }
+/* styles the date of the cards of timeline section */
 .timeline-content .date {
   font-size: 12px;
   font-weight: 300;
@@ -1217,7 +1261,7 @@ footer a {
   letter-spacing: 2px;
 }
 
-
+/* make it responsive */
 @media only screen and (min-width: 768px) {
   .timeline:before {
     content: "";
@@ -1282,11 +1326,12 @@ footer a {
   margin: 30px 20% 50px 20%;
 
 }
-
+/* styles the question of the FAQ */
 #faq h1 {
   font-size: 1.8em;
 }
 
+/* styles the rows of the flex direction */
 #faq .col-faq {
   display: flex;
   flex-direction: column;
@@ -1300,46 +1345,42 @@ footer a {
   margin: 5px;
 
 }
-
 #faq .col-faq:hover {
   transition: 0.3s;
   background-color: #292929;;
   color: white;
 }
 
+/* styles the FAQ answer */
 .faq-closed {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-
+/* styles the icon  */
 .faq-closed img {
   width: 32px;
   height: 32px;
   margin-left: 20px;
 }
 
+/* styles the text of FAQ */
 #faq h3 {
   padding: 20px;
   font-size: 1.7em;
-
 }
-
 #faq .col-faq p {
   display: none;
   padding: 0px 20px 10px 20px;
   font-size: 1.2em;
 }
-
-
-
 #faq .col-faq p.active {
   display: block;
 }
 
 
-/*                styles the Schedule page         */
-
+/*           styles the Schedule page         */
+/* styles the container of the boxes  */
 #schedule-container {
   margin: 100px 5% 100px 5%;
   display: flex;
@@ -1348,6 +1389,7 @@ footer a {
   justify-content: center;
 }
 
+/* styles each box of the schedule page */
 .box-schedule {
   display: flex;
   flex-direction: column;
@@ -1361,11 +1403,13 @@ footer a {
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
+/* styles the image when hovered */
 .box-schedule:hover img{
   transition: 0.5s ease;
   filter: none !important;
 }
 
+/* styles the image  */
 .race-img img{
   width: 100%;
   height: 200px;
@@ -1374,6 +1418,7 @@ footer a {
   background-image: url("../assets/images/bg-race01.jpg");
 }
 
+/* styles the race date of the boxes */
 .race-date {
   display: flex;
   flex-direction: row;
@@ -1381,7 +1426,7 @@ footer a {
   margin-top: 10px;
   margin-bottom: 15px;
 }
-
+/* styles time and month */
 .race-date h4 {
   font-size: 1.5em;
   padding: 10px;
@@ -1392,13 +1437,12 @@ footer a {
   text-align: center;
   border-radius: 10px;
 }
-
 .race-date span {
   margin-left: 10px;
   font-size: 1.3em;
-
 }
 
+/* styles the name container of the race  */
 .race-text {
   display: flex;
   flex-direction: row;
@@ -1408,12 +1452,13 @@ footer a {
   align-items: center;
   width: 80%;
 }
-
+/* styles the text of the race */
 .race-text h3 {
   font-size: 1.3em;
   margin-bottom: 10px;
 }
 
+/* styles the image of the flag  */
 .race-text img {
   margin-right: 10px;
 }
