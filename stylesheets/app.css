@@ -224,7 +224,7 @@ nav {
 
 /*            styles buttons            */
 .button {
-  background-color: rgba(255,20,20,1);
+  background-color: #ed213a;;
   color: white;
   height: 50px;
   display: flex;
@@ -232,6 +232,7 @@ nav {
   align-items: center;
   text-align: center;
   text-decoration: none;
+  font-weight: 800;
 }
 
 /* styles button on hover */
