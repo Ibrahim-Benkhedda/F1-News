@@ -156,8 +156,9 @@ nav {
 /* styles the date of the upcoming event in the header */
 .event-date h3 {
   border-radius: 10px;
-  background-color: red;
+  background-color: #FF3838;
   padding: 4px;
+  text-align: center;
 }
 
 /* center the month of the event  */
@@ -337,7 +338,7 @@ nav {
   }
 
   /* styles the text of the video area section */
-  .highlights p,h3 {
+  .highlights p, .highlights h3, .highlights h4 {
     padding: 20px;
     font-size: 1.2em;
   }
@@ -478,7 +479,7 @@ nav {
   margin-bottom: auto;
 }
 .information-container h3 {
-  color: #ed213a;
+  color: #E7132C;
   margin: auto;
   font-weight: 400;
   font-size:20px;
@@ -486,7 +487,6 @@ nav {
   border-radius:20px;
 }
 .information-container p {
-  /* refrence interactive cards */
   font-weight: 400;
   font-size:15px;
   line-height:90%;
@@ -536,7 +536,7 @@ nav {
 
 /* styles the box of the more news section */
 .box-more-news {
-  /* refrence box shadow */
+  /* [14] */
   display: flex;
   flex-direction: column;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -629,7 +629,7 @@ nav {
 }
 
 
-/* FOOTER */
+/* FOOTER [3] */
 
 /* inspired from "link the youtube video here" */
 footer {
@@ -702,7 +702,7 @@ footer a {
   margin-top: 65px;
 }
 
-/* SLIDER */
+/* SLIDER [5] */
 
 /* styles the slider container  */
 .slider {
@@ -744,7 +744,7 @@ footer a {
 /* styles the title of the slider */
 .slider h1 {
   z-index: 1;
-  /* center image W3 */
+  /* center image from W3C */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -761,7 +761,7 @@ footer a {
 /* styles the text on top of the slider of the schedule page */
 .slider .content {
   z-index: 1;
-  /* center image W3 */
+  /* center image From W3 Website*/
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1020,7 +1020,7 @@ footer a {
   height: 400px;
   margin-top: 10px;
   padding-bottom: 65px;
-  /* refrence for the background: https://projects.verou.me/css3patterns/#carbon */
+  /* [13] refrence for the background: https://projects.verou.me/css3patterns/#carbon */
   background:
   linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
   linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -1179,7 +1179,7 @@ footer a {
   }
 }
 
-/* styles the timeline section */
+/* styles the timeline section [2]*/
 /* code is based and adapted from: */
 .container.time {
   min-height: 100vh;
@@ -1223,7 +1223,7 @@ footer a {
 
 /* styles the h3 of the timeline section */
 .timeline h3 {
-  color: red;
+  color: #FF3838;
 }
 /* styles the lists and unordered list of the timeline section */
 .timeline ul li {
