@@ -26,9 +26,6 @@ function slideNav() {
       }
     })
   })
-
-
-
 }
 
 // calls the function
@@ -37,31 +34,46 @@ slideNav();
 
 
 
-// slider
-let img__slider = document.getElementsByClassName('img__slider');
+// slider [1]
+function slider() {
+  // gets the images by class img-slider
+  let imgSlier = document.getElementsByClassName('img-slider');
+  let index = 0;
+  // numbers of images
+  let n = imgSlier.length;
 
-let etape = 0;
+  // removes the active image
+  function removeActiveImgs() {
+    // iterates through all all the array of images
+      for(let i = 0 ; i < n ; i++) {
+          imgSlier[i].classList.remove('active');
+      }
+  }
 
-let nbr__img = img__slider.length;
-
-function enleverActiveImages() {
-    for(let i = 0 ; i < nbr__img ; i++) {
-        img__slider[i].classList.remove('active');
-    }
+  setInterval(function() {
+      index++;
+      // if the current index is bigger than or equals the number of the images of the array
+      if(index >= n) {
+          // sets the index to 0
+          index = 0;
+      }
+      removeActiveImgs();
+      // adds class active to the image
+      imgSlier[index].classList.add('active');
+  }, 2750)
 }
 
 
-setInterval(function() {
-    etape++;
-    if(etape >= nbr__img) {
-        etape = 0;
-    }
-    enleverActiveImages();
-    img__slider[etape].classList.add('active');
-}, 3000)
+window.onload = function() {
+  // checks if the user url is on the schedule or news page to call the slider function [10]
+  if((window.location.href.indexOf('schedule.html') > -1) || (window.location.href.indexOf('news.html') > -1) ) {
+    // console.log('schedule');
+    slider();
+  }
+}
 
 
-// FAQ cards
+// FAQ cards [4]
 const faqCols = document.querySelectorAll('.col-faq');
  faqCols.forEach(function(faqCol) {
    faqCol.addEventListener('click', function(e) {
