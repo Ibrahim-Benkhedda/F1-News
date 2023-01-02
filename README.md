@@ -1,3 +1,3 @@
 # F1 News
 
-A Front End website project that shows you the latest Formula 1 News for the Web Development Module
+A Front End Website about Formula 1 (F1) in a comprehensive and user-friendly resource for fans of the sport. Built using HTML, CSS, and JavaScript, it is designed to be responsive and display well on all devices. The website offers a wide range of information about F1, including its history, rules and regulations, and profiles of teams and drivers. The layout is clear and easy to navigate, with a visually appealing design featuring clean lines and a consistent color scheme. The content of the website is well-written and informative, with a good balance of text and images, and the use of multimedia elements such as videos and interactive maps enhances the user experience.
